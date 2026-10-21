@@ -6,6 +6,9 @@ Soporte iDev es RustDesk OSS **1.5.0** (tag `1.5.0`, commit
 
 - Código fuente: <https://github.com/edbenrio/rustdesk/tree/soporte-idev>
 - Workflow: `.github/workflows/soporte-idev-windows.yml`
+- Build entregado: commit `6e77a2b1587bf0780188a1f7d2cbb965513176b5`, run
+  <https://github.com/edbenrio/rustdesk/actions/runs/39537364207>,
+  `Soporte-iDev.exe` SHA-256 `57a92c650e40fae74b032617999506ab1d735d477bd02937ae8fac2c5a4e7920`
 
 ## Opción A (recomendada): GitHub Actions
 
