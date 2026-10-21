@@ -5,10 +5,16 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = RustDesk
+// Soporte iDev: the executable must match the internal app name (hbb_common APP_NAME),
+// which the Rust side uses to build bundle paths and launchd plists. The visible name
+// "Soporte iDev" is set in Info.plist (CFBundleName / CFBundleDisplayName).
+PRODUCT_NAME = Soporte-iDev
 
-// The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.carriez.flutterHbb
+// Soporte iDev: keep the Swift module name, MainMenu.xib references customModule="RustDesk".
+PRODUCT_MODULE_NAME = RustDesk
+
+// The application's bundle identifier (the Runner target sets it in project.pbxproj)
+PRODUCT_BUNDLE_IDENTIFIER = com.idevpy.soporte
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2026 Purslane Tech Pte. Ltd. All rights reserved.
+PRODUCT_COPYRIGHT = Basado en RustDesk. Copyright © 2026 Purslane Tech Pte. Ltd. Licencia AGPL-3.0.

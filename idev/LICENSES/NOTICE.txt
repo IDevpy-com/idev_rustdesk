@@ -29,4 +29,6 @@ afiliado a RustDesk ni a Purslane Tech Pte. Ltd.
 Este programa incluye componentes de terceros, cada uno con su propia
 licencia (Flutter - BSD-3-Clause; FFmpeg - LGPL; libvpx, libyuv, aom - BSD;
 opus - BSD; libsodium - ISC; entre otros). Los avisos de licencia de los
-paquetes Flutter están incluidos en data/flutter_assets/NOTICES.Z.
+paquetes Flutter están incluidos en data/flutter_assets/NOTICES.Z (Windows)
+o en Contents/Frameworks/App.framework/Resources/flutter_assets/NOTICES.Z
+(macOS).
