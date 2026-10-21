@@ -193,7 +193,15 @@ jobs:
           python3 ./generate.py -f ../../rustdesk/ -o . -e "../../rustdesk/${APP_EXE}"
           popd
           mkdir -p ./dist
-          packer=$(ls ./target/release/rustdesk-portable-packer.exe ./libs/portable/target/release/rustdesk-portable-packer.exe 2>/dev/null | head -n 1)
+          packer=""
+          for candidate in ./target/release/rustdesk-portable-packer.exe ./libs/portable/target/release/rustdesk-portable-packer.exe; do
+            if [ -f "$candidate" ]; then packer="$candidate"; break; fi
+          done
+          if [ -z "$packer" ]; then
+            echo "rustdesk-portable-packer.exe not found"
+            find . -name rustdesk-portable-packer.exe
+            exit 1
+          fi
           echo "packer: $packer"
           mv "$packer" "./dist/${APP_EXE}"
           (cd rustdesk && 7z a -tzip "../dist/Soporte-iDev-${VERSION}-portable-carpeta.zip" . > /dev/null)
