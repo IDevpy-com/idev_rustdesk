@@ -1,0 +1,32 @@
+Soporte iDev
+===========
+
+Soporte iDev es una versión modificada del cliente de escritorio remoto
+RustDesk (https://github.com/rustdesk/rustdesk), versión 1.5.0
+(commit fada664df7a294d1d1a9ca3e7cd3637069122f17).
+
+RustDesk: Copyright (C) Purslane Tech Pte. Ltd. y colaboradores.
+Distribuido bajo la GNU Affero General Public License v3.0 (AGPL-3.0).
+El texto completo de la licencia está en RustDesk-AGPL-3.0.txt.
+
+Soporte iDev se distribuye bajo la misma licencia AGPL-3.0.
+
+Código fuente correspondiente a esta versión (incluidas las modificaciones):
+  https://github.com/edbenrio/rustdesk/tree/soporte-idev
+
+Modificaciones realizadas por iDev (https://idevpy.com):
+  - Servidor ID predeterminado: rustdesk.idevpy.com y su clave pública.
+  - Nombre visible "Soporte iDev", nombre interno "Soporte-iDev".
+  - Íconos y logo de iDev.
+  - Idioma predeterminado: español.
+  - Enlace al código fuente en la sección "Acerca de".
+No se agregó telemetría, contraseñas predefinidas, acceso desatendido
+automático ni ningún mecanismo que oculte la aplicación o sus avisos.
+
+"RustDesk" es una marca de sus respectivos titulares. Soporte iDev no está
+afiliado a RustDesk ni a Purslane Tech Pte. Ltd.
+
+Este programa incluye componentes de terceros, cada uno con su propia
+licencia (Flutter - BSD-3-Clause; FFmpeg - LGPL; libvpx, libyuv, aom - BSD;
+opus - BSD; libsodium - ISC; entre otros). Los avisos de licencia de los
+paquetes Flutter están incluidos en data/flutter_assets/NOTICES.Z.

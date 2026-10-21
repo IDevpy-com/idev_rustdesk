@@ -2568,6 +2568,16 @@ class _AboutState extends State<_About> {
                     translate('Website'),
                     style: linkStyle,
                   ).marginSymmetric(vertical: 4.0)),
+              // Soporte iDev: AGPL-3.0 source offer for this modified build.
+              InkWell(
+                  onTap: () {
+                    launchUrlString(
+                        'https://github.com/edbenrio/rustdesk/tree/soporte-idev');
+                  },
+                  child: Text(
+                    'Soporte iDev está basado en RustDesk (AGPL-3.0). Código fuente',
+                    style: linkStyle,
+                  ).marginSymmetric(vertical: 4.0)),
               Container(
                 decoration: const BoxDecoration(color: Color(0xFF2c8cff)),
                 padding:
