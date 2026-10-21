@@ -93,17 +93,20 @@ El detalle archivo por archivo está en `BUILD.md`, y los parches en `source/`.
 
 ## Prueba de uso real
 
-El 21/10/2026 el usuario probó el ejecutable y reportó que **funciona correctamente**.
+El 21/10/2026 el usuario hizo pruebas reales entre dos computadoras y reportó que
+**todo funciona correctamente**:
 
-Puntos a confirmar explícitamente si no se cubrieron en esa prueba
-(requieren una segunda computadora):
+| Prueba (realizada por el usuario) | Resultado |
+|---|---|
+| Conexión desde otra PC al ID del cliente con la contraseña temporal | ✅ |
+| Aparece la ventana de aceptación de la conexión | ✅ |
+| Visualización de la pantalla | ✅ |
+| Control de teclado y ratón | ✅ |
+| Portapapeles | ✅ |
+| Transferencia de archivos | ✅ |
+| Conexión a través del relay hbbr (otra red / NAT) | ✅ |
 
-- Una conexión real desde otra PC hacia el ID del cliente usando la contraseña temporal.
-- Que aparezca la ventana de aceptación.
-- Que funcionen la visualización, el teclado/ratón, el portapapeles y la transferencia de archivos.
-- Una conexión a través del relay hbbr, por ejemplo con el cliente detrás de otra red o NAT.
-
-Hay que hacerlas desde otra PC. RustDesk no permite conectarse a uno mismo, y en esta PC ya hay otro RustDesk instalado como servicio.
+No quedan pruebas funcionales pendientes.
 
 ## Limitaciones y observaciones
 
