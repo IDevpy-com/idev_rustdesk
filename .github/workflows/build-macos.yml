@@ -335,10 +335,17 @@ jobs:
             else
               echo "OK      no LaunchAgent/LaunchDaemon installed"
             fi
-            echo "== Quit"
+            echo "== Quit (Apple Event, same path as Cmd+Q / menu 'Salir de Soporte iDev')"
+            # Flutter answers the quit event with "cancel" and then terminates by itself
+            # once the Dart side allows it, so the result is judged by the process.
             osascript -e 'quit app "Soporte iDev"' || true
-            sleep 5
-            pkill -f "Soporte-iDev" || true
+            for i in $(seq 1 15); do pgrep -f "Soporte-iDev" > /dev/null || break; sleep 1; done
+            if pgrep -fl "Soporte-iDev"; then
+              echo "FAIL    still running 15 s after the quit request"; status=1
+              pkill -f "Soporte-iDev" || true
+            else
+              echo "OK      app quit after the quit request, no Soporte iDev process left"
+            fi
           } 2>&1 | tee "$log"
           cp /tmp/rust.log "logs/rust-log-${{ matrix.job.label }}.txt" 2>/dev/null || true
           grep -q "^FAIL" "$log" && exit 1 || exit 0
