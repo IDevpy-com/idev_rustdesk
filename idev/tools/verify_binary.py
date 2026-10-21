@@ -11,7 +11,9 @@ import sys
 MUST_CONTAIN = [
     b"rustdesk.idevpy.com",
     b"O6qGUkD2hlCk26erLMuMmBk3+PReg03kaXMebv+46G0=",
-    b"Soporte-iDev",
+    # APP_NAME "Soporte-iDev" (12 bytes) is copied with to_owned(), which the
+    # optimizer emits as 8 + 4 byte immediates, so only "Soporte-" is contiguous.
+    b"Soporte-",
     b"Soporte iDev",
 ]
 MUST_NOT_CONTAIN = [
