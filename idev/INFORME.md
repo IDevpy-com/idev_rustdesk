@@ -91,9 +91,12 @@ El detalle archivo por archivo está en `BUILD.md`, y los parches en `source/`.
 | Permisos predeterminados (teclado/ratón, portapapeles, archivos) habilitados | ✅ |
 | Arranques repetidos (8 en total, 3 con datos limpios) | ⚠️ 7/8 correctos (ver limitaciones) |
 
-## Pruebas pendientes
+## Prueba de uso real
 
-Requieren una segunda computadora:
+El 21/10/2026 el usuario probó el ejecutable y reportó que **funciona correctamente**.
+
+Puntos a confirmar explícitamente si no se cubrieron en esa prueba
+(requieren una segunda computadora):
 
 - Una conexión real desde otra PC hacia el ID del cliente usando la contraseña temporal.
 - Que aparezca la ventana de aceptación.
@@ -109,7 +112,9 @@ Hay que hacerlas desde otra PC. RustDesk no permite conectarse a uno mismo, y en
 3. **Botón "Instalar".** La pantalla principal muestra la tarjeta estándar de RustDesk que sugiere instalar para un mejor funcionamiento con UAC. Instalar requiere que el cliente haga clic y acepte UAC, y no se hace automáticamente.
 4. **Pantallas elevadas.** Sin instalar, el técnico no puede controlar ventanas que piden elevación (UAC) del cliente. Es el comportamiento normal de RustDesk portable.
 5. **Solo x64.** No se generó versión ARM64 ni MSI.
-6. **Distribución.** El `.exe` está en tu PC y como artefacto de GitHub Actions, que vence en 30 días. Para un enlace de descarga permanente para clientes se puede publicar un Release en el fork o subirlo a idevpy.com.
+6. **Distribución.** Está publicado como pre-release en
+   <https://github.com/edbenrio/rustdesk/releases/tag/soporte-idev-1.5.0>.
+   Descarga directa: <https://github.com/edbenrio/rustdesk/releases/download/soporte-idev-1.5.0/Soporte-iDev.exe>.
 
 ## Contenido de `dist/`
 
