@@ -25,6 +25,11 @@ Cada `.dmg` contiene `Soporte iDev.app`, un acceso directo a Aplicaciones y `LEA
 macOS muestra un aviso la primera vez y el cliente debe autorizar la app desde
 Ajustes del Sistema → Privacidad y seguridad (ver `README-macOS.txt`).
 
+**Uso decidido (23/10/2026):** estos paquetes se usan **internamente**, para desarrollo
+y pruebas de los compañeros de iDev que tienen Mac. No se publicó ninguna release para
+clientes. Primera prueba real prevista: una Mac Intel propia y una Apple Silicon de un
+compañero (ver "Pendiente: pruebas en una Mac real").
+
 ## Versión del código
 
 - Base: RustDesk OSS **1.5.0**, commit `fada664df7a294d1d1a9ca3e7cd3637069122f17`;
@@ -42,8 +47,12 @@ Ajustes del Sistema → Privacidad y seguridad (ver `README-macOS.txt`).
   El build de Apple Silicon sobre `09e5711` falló por un error de red del runner
   (`git clone` de un paquete Flutter cortado con "Connection reset by peer") y no se
   pudo relanzar porque GitHub respondió "Actions has been disabled for this repository"
-  (ver Limitaciones). Cuando Actions vuelva a funcionar, conviene regenerar Apple Silicon
-  desde `09e5711` para que ambos paquetes salgan del mismo commit.
+  (ver Limitaciones). Para uso interno se aceptó así. Antes de distribuir a clientes,
+  conviene regenerar ambos paquetes desde el último commit.
+- En los dos paquetes, "Acerca de" enlaza el código fuente en el fork
+  <https://github.com/edbenrio/rustdesk/tree/soporte-idev>, que sigue público y
+  actualizado. Desde el commit `e3ddc3e` el enlace apunta al repositorio oficial
+  <https://github.com/IDevpy-com/idev_rustdesk>; los próximos paquetes lo incluirán.
 - Ambos commits incluyen todos los cambios de Windows sin modificarlos; la compilación
   Windows se volvió a ejecutar con éxito sobre los dos (runs 39686844559 y 39694268262).
 
@@ -165,11 +174,15 @@ control remoto funcione. Hacer esta lista en una Mac Intel y en una Apple Silico
    ejecución nueva en el repo con "Actions has been disabled for this repository",
    aunque la configuración del repo indica Actions habilitado, la facturación no muestra
    consumo relevante y el workflow macOS aparecía desactivado sin que nadie lo hiciera.
-   Afecta también al workflow de Windows. Según el asistente de soporte de GitHub, puede
-   ser una restricción heredada del repositorio padre (`rustdesk/rustdesk`). Para no
-   depender de eso, el 23/10/2026 el proyecto se trasladó a un repositorio propio que
-   no es fork: <https://github.com/edbenrio/idev_rustdesk> (rama `soporte-idev`, con todo
-   el historial). El fork `edbenrio/rustdesk` se conserva sin cambios de visibilidad.
+   Afecta también al workflow de Windows. Se probaron dos alternativas: un repositorio
+   propio que no es fork (`edbenrio/idev_rustdesk`) y otro en la organización
+   (`IDevpy-com/idev_rustdesk`). En ninguno GitHub registra los workflows, por lo que la
+   restricción afecta al **usuario** `edbenrio`, no a un repositorio. El soporte de
+   GitHub cerró el ticket sin revisarlo: en el plan gratuito solo ofrece GitHub
+   Community. Mientras dure, compilar requiere una Mac real (script equivalente al
+   workflow) u otro servicio de CI con macOS.
+   El código queda en los tres repositorios, con el mismo contenido; el oficial es
+   <https://github.com/IDevpy-com/idev_rustdesk> (rama `soporte-idev`, historial completo).
 8. **macOS mínimo.** Es el que declaran y exigen los binarios; no se probó en esas
    versiones antiguas, solo en los runners (macOS 15 Intel y macOS 14 Apple Silicon).
 
