@@ -5,7 +5,7 @@ Soporte iDev para macOS es el mismo código que la versión Windows (RustDesk OS
 submódulo `libs/hbb_common` en `229b904508364c8997aad0fb5af57effac859f60`) más
 unos pocos cambios propios de macOS. Ver también `BUILD.md` (Windows).
 
-- Código fuente: <https://github.com/edbenrio/rustdesk/tree/soporte-idev>
+- Código fuente: <https://github.com/edbenrio/idev_rustdesk/tree/soporte-idev>
 - Workflow: `.github/workflows/build-macos.yml` ("Soporte iDev - macOS")
 - Build entregado: ver `INFORME-macOS.md` (commit, run y SHA-256).
 
@@ -13,7 +13,7 @@ unos pocos cambios propios de macOS. Ver también `BUILD.md` (Windows).
 
 1. En GitHub: **Actions → "Soporte iDev - macOS" → Run workflow** (rama `soporte-idev`).
    Por consola:
-   `gh workflow run build-macos.yml -R edbenrio/rustdesk --ref soporte-idev -f launch-test=true`
+   `gh workflow run build-macos.yml -R edbenrio/idev_rustdesk --ref soporte-idev -f launch-test=true`
 2. El workflow compila las dos arquitecturas en paralelo, cada una en un runner nativo:
 
    | Paquete | Target Rust | Runner | Features | macOS mínimo |
@@ -22,7 +22,7 @@ unos pocos cambios propios de macOS. Ver también `BUILD.md` (Windows).
    | `Soporte-iDev-macOS-AppleSilicon.dmg` | `aarch64-apple-darwin` | `macos-14` | `flutter,hwcodec,unix-file-copy-paste,screencapturekit` | 12.3 |
 
 3. Descargá el artefacto `Soporte-iDev-macOS` (los dos `.dmg` y `SHA256SUMS.txt`):
-   `gh run download <run-id> -R edbenrio/rustdesk -n Soporte-iDev-macOS -D dist`
+   `gh run download <run-id> -R edbenrio/idev_rustdesk -n Soporte-iDev-macOS -D dist`
    Los artefactos `logs-macOS-Intel` y `logs-macOS-AppleSilicon` traen las
    verificaciones, el log de la prueba de lanzamiento y una captura de pantalla.
 

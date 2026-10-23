@@ -12,7 +12,7 @@ El texto completo de la licencia está en RustDesk-AGPL-3.0.txt.
 Soporte iDev se distribuye bajo la misma licencia AGPL-3.0.
 
 Código fuente correspondiente a esta versión (incluidas las modificaciones):
-  https://github.com/edbenrio/rustdesk/tree/soporte-idev
+  https://github.com/edbenrio/idev_rustdesk/tree/soporte-idev
 
 Modificaciones realizadas por iDev (https://idevpy.com):
   - Servidor ID predeterminado: rustdesk.idevpy.com y su clave pública.
