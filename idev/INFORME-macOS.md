@@ -165,8 +165,11 @@ control remoto funcione. Hacer esta lista en una Mac Intel y en una Apple Silico
    ejecución nueva en el repo con "Actions has been disabled for this repository",
    aunque la configuración del repo indica Actions habilitado, la facturación no muestra
    consumo relevante y el workflow macOS aparecía desactivado sin que nadie lo hiciera.
-   Afecta también al workflow de Windows. Requiere revisión desde la web de GitHub o con
-   el soporte de GitHub.
+   Afecta también al workflow de Windows. Según el asistente de soporte de GitHub, puede
+   ser una restricción heredada del repositorio padre (`rustdesk/rustdesk`). Para no
+   depender de eso, el 23/10/2026 el proyecto se trasladó a un repositorio propio que
+   no es fork: <https://github.com/edbenrio/idev_rustdesk> (rama `soporte-idev`, con todo
+   el historial). El fork `edbenrio/rustdesk` se conserva sin cambios de visibilidad.
 8. **macOS mínimo.** Es el que declaran y exigen los binarios; no se probó en esas
    versiones antiguas, solo en los runners (macOS 15 Intel y macOS 14 Apple Silicon).
 
