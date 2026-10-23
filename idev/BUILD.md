@@ -4,7 +4,7 @@ Soporte iDev es RustDesk OSS **1.5.0** (tag `1.5.0`, commit
 `fada664df7a294d1d1a9ca3e7cd3637069122f17`, submódulo `libs/hbb_common` en
 `229b904508364c8997aad0fb5af57effac859f60`) con un conjunto pequeño de cambios.
 
-- Código fuente: <https://github.com/edbenrio/idev_rustdesk/tree/soporte-idev>
+- Código fuente: <https://github.com/IDevpy-com/idev_rustdesk/tree/soporte-idev>
 - Workflow: `.github/workflows/soporte-idev-windows.yml`
 - Build entregado: commit `6e77a2b1587bf0780188a1f7d2cbb965513176b5`, run
   <https://github.com/edbenrio/rustdesk/actions/runs/39537364207>,
@@ -16,11 +16,11 @@ Compila en los runners Windows de GitHub, gratis para repos públicos, con las
 mismas versiones que el workflow oficial de RustDesk.
 
 1. Hacé un push a la rama `soporte-idev`, o en GitHub abrí **Actions → "Soporte iDev - Windows x64" → Run workflow**.
-   Por consola: `gh workflow run "Soporte iDev - Windows x64" -R edbenrio/idev_rustdesk --ref soporte-idev`
+   Por consola: `gh workflow run "Soporte iDev - Windows x64" -R IDevpy-com/idev_rustdesk --ref soporte-idev`
 2. Esperá a que termine. La primera vez tarda unas 2 horas porque vcpkg compila ffmpeg, libvpx y aom.
    Las siguientes son más rápidas gracias a la caché.
 3. Descargá el artefacto `Soporte-iDev-windows-x64`:
-   `gh run download <run-id> -R edbenrio/idev_rustdesk -n Soporte-iDev-windows-x64 -D dist`
+   `gh run download <run-id> -R IDevpy-com/idev_rustdesk -n Soporte-iDev-windows-x64 -D dist`
    Trae `Soporte-iDev.exe`, el zip con la carpeta portable y `SHA256SUMS.txt`.
 
 El workflow corta la compilación si `librustdesk.dll` no trae `rustdesk.idevpy.com`

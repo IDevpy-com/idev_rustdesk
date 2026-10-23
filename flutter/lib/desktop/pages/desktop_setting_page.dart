@@ -2572,7 +2572,7 @@ class _AboutState extends State<_About> {
               InkWell(
                   onTap: () {
                     launchUrlString(
-                        'https://github.com/edbenrio/idev_rustdesk/tree/soporte-idev');
+                        'https://github.com/IDevpy-com/idev_rustdesk/tree/soporte-idev');
                   },
                   child: Text(
                     'Soporte iDev está basado en RustDesk (AGPL-3.0). Código fuente',

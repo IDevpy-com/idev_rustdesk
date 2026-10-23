@@ -90,7 +90,7 @@ Información
 -----------
 Servidor: rustdesk.idevpy.com (servidor privado de iDev)
 Soporte iDev está basado en RustDesk (https://rustdesk.com), licencia
-AGPL-3.0. Código fuente: https://github.com/edbenrio/idev_rustdesk/tree/soporte-idev
+AGPL-3.0. Código fuente: https://github.com/IDevpy-com/idev_rustdesk/tree/soporte-idev
 Los avisos de licencia están dentro de la aplicación, en
 Contents/Resources/LICENSES.
 iDev - https://idevpy.com
